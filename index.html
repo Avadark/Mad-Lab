@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <link rel="manifest" href="manifest.webmanifest">
+<meta charset="UTF-8" />
+<title>Tech Artistry Home</title>
+<script src="sw.js">
+    if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) => {
+        registration.addEventListener("updatefound", () => {
+          // If updatefound is fired, it means that there's
+          // a new service worker being installed.
+          const installingWorker = registration.installing;
+          console.log(
+            "A new service worker is being installed:",
+            installingWorker
+          );
+   
+          // You can listen for changes to the installing service worker's
+          // state via installingWorker.onstatechange
+        });
+      })
+      .catch((error) => {
+        console.error(`Service worker registration failed: ${error}`);
+      });
+  } else {
+    console.error("Service workers are not supported.");
+  }
+
+  </script>
+<style>
+    @charset "utf-8";
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container{
+	width:100%; 
+	height:auto;
+	} 
+ 
+.head{
+	width:100%;
+	height:20px;
+	background-color:#AEFFFF;
+	}
+	
+.header{
+	width:1200px;
+	height:200px;
+	margin: 0 auto 0 auto;
+	background-color:#fff;
+}
+
+/* Logo */
+
+.logo{
+	width:400px;
+	height:70px;
+	margin-top:80px;
+	background-color:#fff;
+	float:left;
+}
+.logotext{
+	font-family:Verdana, "Geneva", sans-serif;
+	font-size:40px;
+	padding-top:10px;
+	font-weight:bolder;
+}
+
+.temp{
+	color:#AEFFFF;
+}
+
+/*navigation*/
+
+.navbar{
+	width:800px;
+	height:80px;
+	margin-top:78px;
+	background-color:#fFF;
+	float:right;
+}
+
+.navbar ul{
+	list-style: none;
+	padding:0;
+}
+
+.navbar ul li{
+	display:inline;
+	font-family: "Verdana", Geneva, sans-serif;
+	font-weight:bold;
+	font-size:14px;
+	
+}
+
+.navbar ul li a{
+	text-decoration:none;
+	padding:20px 10px;
+	width:100px;
+	background-color:#fff;
+	color:#000;
+	float:left;
+	text-align:center;
+}
+
+.navbar ul li a:hover {
+	background-color: #AEFFFF;
+	color:#fff;
+}
+
+/*banner*/
+
+.banner{
+	width:100%;
+	height:400px;
+	background-color:#ccc;
+	border: 1px solid #666;
+}
+
+/*.bannerimg {
+	width:1100px;
+	height:400px;
+	margin:0 auto 0 auto;
+}
+*/
+
+/* upper middle section div and text Css */
+.uppermid-sec{
+	width:1200px;
+	height:450px;
+	background-color:#fff;
+	margin:0 auto 0 auto;
+}
+
+.headtext{
+	text-align:center;
+	font-family:"Verdana", Geneva, sans-serif;
+	font-size:25px;
+	color:#333;
+	padding-top:20px;
+}
+
+.bodytext{
+	text-align:center;
+	font-family:"Verdana", Geneva, sans-serif;
+	font-size:14px;
+	color:#333;
+}
+	
+.bodytext1{
+	font-family:"Verdana", Geneva, sans-serif;
+	font-size:12px;
+	color:#333;
+}
+
+.box1{
+	width:380px;
+	height:400px;
+	background-color:#fff;
+	float:left;
+  	border: 1px solid #E9E8EA;
+	margin-top:30px;
+}
+
+.pcicon {
+	width:165px;
+	height:100px;
+	background-color:#063;
+	float:left;
+	margin-left:110px;
+
+}
+
+.subtitle1{
+	width:380px;
+	height:50px;
+	background-color:#fff;
+	float:left;
+}
+
+.content1{
+	width:350px;
+	height:100px;
+	margin-left:15px;
+	float:left;
+}
+
+.btn{
+	width:200px;
+	height:30px;
+	border-radius:25px;
+	background:#D2FFFF;
+	margin-left:80px;
+	margin-top:30px;
+	float:left;
+}
+
+.btntext{
+	font-family: "Verdana", Geneva, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:10px;
+}
+.btn a {
+	text-decoration:none;
+	color:#333;
+}
+
+
+.btn:hover{
+	background-color:#AEFFFF;
+	color:#fff;
+	
+}
+
+
+
+.box2{
+	width:380px;
+	height:400px;
+	background-color:#fff;
+	float:left;
+    border: 1px solid #E9E8EA;
+	margin:30px 20px 0 30px ;
+
+}
+
+.mobicon {
+	width:136px;
+	height:100px;
+	background-color:#063;
+	float:left;
+	margin-left:120px;
+}
+
+.subtitle2{
+	width:380px;
+	height:50px;
+	background-color:#fff;
+	float:left;
+}
+
+.content2{
+	width:350px;
+	height:100px;
+	margin-left:15px;
+	float:left;
+}
+
+
+.box3{
+	width:380px;
+	height:400px;
+	background-color:#fff;
+	float:right;
+    border: 1px solid #E9E8EA;
+	margin-top:30px;
+}
+
+.dataicon {
+	width:180px;
+	height:100px;
+	background-color:#063;
+	float:left;	
+	margin-left:100px;
+}
+
+.subtitle3{
+	width:380px;
+	height:50px;
+	background-color:#fff;
+	float:left;
+}
+
+.content3{
+	width:350px;
+	height:100px;
+	margin-left:15px;
+	float:left;
+}
+.lowermid-sec{
+	width:1200px;
+	height:350px;
+	background-color: #fff;
+	margin:0 auto 0 auto;
+}
+
+.box4{
+	width:390px;
+	height:300px;
+	background-color:#fff;
+	float:left;
+	margin-top:30px;
+}
+
+.subtitle{
+	width:390px;
+	height:40px;
+	background-color:#FFF;
+	float:left;
+	border:1px solid #E9E8EA;
+}
+
+
+
+.content{
+	width:360px;
+	height:200px;
+	margin-left:15px;
+	margin-right:15px;
+	float:left;
+	background:#fff;
+	border: 1px solid #E9E8EA;
+}
+
+.contentwrapper{
+	width:320px;
+	height:auto;
+	float:left;
+	margin-left:5px;
+}
+
+.read{
+	
+	font-family: "Verdana", Geneva, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	padding-top:10px;
+	float:left;
+	margin-left:10px;
+}
+.read a {
+	text-decoration:none;
+	color: #666;
+}
+
+.read a:hover{
+	color: #000;
+}
+
+.box5{
+	width:390px;
+	height:300px;
+	background-color:#fff;
+	float:left;
+	margin:30px 15px 0 15px ;
+
+}
+
+.box6{
+	width:390px;
+	height:300px;
+	background-color:#fff;
+	float:left;
+	margin-top:30px;
+}
+
+.foot{
+	width:100%;
+	height:30px;
+	background-color:#AEFFFF;
+	}
+	
+.footer{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color: #09C;
+	font-weight:bold;
+	float:left;
+	padding:5px;
+	text-indent:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="head"></div>
+
+<!--logo and navigation -->
+<div class="header">
+<div class="logo logotext"> TECH <span class="temp">ARTISTRY</span></div>
+<div class="navbar"> 
+<ul>
+<li><a href="Index.html">Home</a></li>
+<li><a href="About.html">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Clients</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</div>
+</div>
+
+<!--banner-->
+<div class="banner"></div>
+</div>
+  <!--upper middle section-->
+
+<div class="uppermid-sec">
+
+<div class="box1">
+<div class="pcicon"><img src="Images/pc.png"/></div>
+<div class="subtitle1 headtext"> Computer Repair</div>
+<div class="content1 bodytext"><p>this is a cool website and a cool company which provides excellent services to all systems.this is a cool website and a cool company which provides excellent services to all systems.</p> </div>
+<div class="btn btntext"> <a href="#">Read more</a></div>
+</div>
+
+<div class="box2">
+<div class="mobicon"><img src="Images/mobile.png"/></div>
+<div class="subtitle2 headtext"> Mobile Data Recovery</div>
+<div class="content2 bodytext"><p>this is a cool website and a cool company which provides excellent services to all systems.this is a cool website and a cool company which provides excellent services to all systems.</p></div>
+<div class="btn btntext">  <a href="#">Read more</a></div>
+</div>
+
+<div class="box3">
+<div class="dataicon"><img src="Images/data.png"/></div>
+<div class="subtitle3 headtext"> Data Recovery</div>
+<div class="content3 bodytext"><p>this is a cool website and a cool company which provides excellent services to all systems.this is a cool website and a cool company which provides excellent services to all systems.</p></div>
+<div class="btn btntext"> <a href="#">Read more</a></div>
+</div>
+
+</div>
+
+<!--Lower middle section-->
+
+<div class="lowermid-sec">
+<div class="box4"> 
+<div class="subtitle headtext">About Us </div>
+<div class="content"><div class="contentwrapper bodytext1"><p>this is a cool website and a cool company which provides excellent services to all systems.this is a cool website and a cool company which provides excellent services to all systems.</p></div><div class="read"><a href="#">Read More</a></div>
+</div>
+
+</div>
+<div class="box5"><div class="subtitle headtext">Support </div>
+<div class="content"><div class="contentwrapper bodytext1"><p>this is a cool website and a cool company which provides excellent services to all systems. this is a cool website and a cool company which provides excellent services to all systems. this is a cool website and a cool company which provides excellent services to all systems.this is a cool website and a cool company which provides excellent services to all systems.</p></div><div class="read"><a href="#">Read More</a></div>
+</div>
+</div>
+
+
+<div class="box6"><div class="subtitle headtext">Ask for a visit! </div>
+<div class="content "><div class="contentwrapper bodytext1"><p>this is a cool website and a cool company which provides excellent services to all systems.this is a cool website and a cool company which provides excellent services to all systems.</p></div><div class="read"><a href="#">Read More</a></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="foot footer"> <p>&copy; 2009 Tech-Artistry Company. All Rights Reserved.</p>
+ </div>
+
+  
+  </body>
+</html>  
